@@ -92,6 +92,7 @@ combineData<-function()
         # saving data in a csv file
         write.table(dataset1,"./tidydataset1.txt",row.names = F)        
        
+        
         # array containing names of averaged measurement
         cname2<-array(dim=length(mean_col)+2)
         

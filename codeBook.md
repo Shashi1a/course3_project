@@ -190,7 +190,7 @@ subject id.
 
 9 - For step 5 of the assignment we extract the column corresponding to mean 
 value of observables, activity name and subject ids. Following are the column
-name and the column name
+name and the column names.
     column id       column name
     1               tBodyAcc-mean()-X           
     2               tBodyAcc-mean()-Y           
