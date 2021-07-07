@@ -65,88 +65,94 @@ each subject.
 
 12. test/Inertial Signals: Folder with individual observation for each subject.
 
-We are interested in the following features out of all 561 and there value lies in the range[-1:1].
-    tBodyAcc-mean()-X           
-    tBodyAcc-mean()-Y           
-    tBodyAcc-mean()-Z           
-    tBodyAcc-std()-X            
-    tBodyAcc-std()-Y            
-    tBodyAcc-std()-Z           
-    tGravityAcc-mean()-X        
-    tGravityAcc-mean()-Y        
-    tGravityAcc-mean()-Z        
-    tGravityAcc-std()-X         
-    tGravityAcc-std()-Y         
-    tGravityAcc-std()-Z        
-    tBodyAccJerk-mean()-X       
-    tBodyAccJerk-mean()-Y       
-    tBodyAccJerk-mean()-Z       
-    tBodyAccJerk-std()-X        
-    tBodyAccJerk-std()-Y        
-    tBodyAccJerk-std()-Z       
-    tBodyGyro-mean()-X         
-    tBodyGyro-mean()-Y          
-    tBodyGyro-mean()-Z          
-    tBodyGyro-std()-X           
-    tBodyGyro-std()-Y           
-    tBodyGyro-std()-Z          
-    tBodyGyroJerk-mean()-X
-    tBodyGyroJerk-mean()-Y      
-    tBodyGyroJerk-mean()-Z      
-    tBodyGyroJerk-std()-X      
-    tBodyGyroJerk-std()-Y       
-    tBodyGyroJerk-std()-Z      
-    tBodyAccMag-mean()       
-    tBodyAccMag-std()           
-    tGravityAccMag-mean()          
-    tGravityAccMag-std()        
-    tBodyAccJerkMag-mean()      
-    tBodyAccJerkMag-std()      
-    tBodyGyroMag-mean()        
-    tBodyGyroMag-std()          
-    tBodyGyroJerkMag-mean()     
-    tBodyGyroJerkMag-std()      
-    fBodyAcc-mean()-X           
-    fBodyAcc-mean()-Y          
-    fBodyAcc-mean()-Z           
-    fBodyAcc-std()-X            
-    fBodyAcc-std()-Y            
-    fBodyAcc-std()-Z            
-    fBodyAccJerk-mean()-X       
-    fBodyAccJerk-mean()-Y      
-    fBodyAccJerk-mean()-Z      
-    fBodyAccJerk-std()-X       
-    fBodyAccJerk-std()-Y        
-    fBodyAccJerk-std()-Z        
-    fBodyGyro-mean()-X          
-    fBodyGyro-mean()-Y         
-    fBodyGyro-mean()-Z         
-    fBodyGyro-std()-X           
-    fBodyGyro-std()-Y           
-    fBodyGyro-std()-Z           
-    fBodyAccMag-mean()          
-    fBodyAccMag-std()          
-    fBodyBodyAccJerkMag-mean()
-    fBodyBodyAccJerkMag-std()  
-    fBodyBodyGyroMag-mean()     
-    fBodyBodyGyroMag-std()      
-    fBodyBodyGyroJerkMag-mean()
-    fBodyBodyGyroJerkMag-std() 
+For first part we are interested in the following features out of all 561, their 
+value lies in the range[-1:1]. column id and column name for the first dataset is
+shown below (step 4).
+    column id   column name
+    1           tBodyAcc-mean()-X           
+    2           tBodyAcc-mean()-Y           
+    3           tBodyAcc-mean()-Z           
+    4           tBodyAcc-std()-X            
+    5           tBodyAcc-std()-Y            
+    6           tBodyAcc-std()-Z           
+    7           tGravityAcc-mean()-X        
+    8           tGravityAcc-mean()-Y        
+    9           tGravityAcc-mean()-Z        
+    10          tGravityAcc-std()-X         
+    11          tGravityAcc-std()-Y         
+    12          tGravityAcc-std()-Z        
+    13          tBodyAccJerk-mean()-X       
+    14          tBodyAccJerk-mean()-Y       
+    15          tBodyAccJerk-mean()-Z       
+    16          tBodyAccJerk-std()-X        
+    17          tBodyAccJerk-std()-Y        
+    18          tBodyAccJerk-std()-Z       
+    19          tBodyGyro-mean()-X         
+    20          tBodyGyro-mean()-Y          
+    21          tBodyGyro-mean()-Z          
+    22          tBodyGyro-std()-X           
+    23          tBodyGyro-std()-Y           
+    24          tBodyGyro-std()-Z          
+    25          tBodyGyroJerk-mean()-X
+    26          tBodyGyroJerk-mean()-Y      
+    27          tBodyGyroJerk-mean()-Z      
+    28          tBodyGyroJerk-std()-X      
+    29          tBodyGyroJerk-std()-Y       
+    30          tBodyGyroJerk-std()-Z      
+    31          tBodyAccMag-mean()       
+    32          tBodyAccMag-std()           
+    33          tGravityAccMag-mean()          
+    34          tGravityAccMag-std()        
+    35          tBodyAccJerkMag-mean()      
+    36          tBodyAccJerkMag-std()      
+    37          tBodyGyroMag-mean()        
+    38          tBodyGyroMag-std()          
+    39          tBodyGyroJerkMag-mean()     
+    40          tBodyGyroJerkMag-std()      
+    41          fBodyAcc-mean()-X           
+    42          fBodyAcc-mean()-Y          
+    43          fBodyAcc-mean()-Z           
+    44          fBodyAcc-std()-X            
+    45          fBodyAcc-std()-Y            
+    46          fBodyAcc-std()-Z            
+    47          fBodyAccJerk-mean()-X       
+    48          fBodyAccJerk-mean()-Y      
+    49          fBodyAccJerk-mean()-Z      
+    50          fBodyAccJerk-std()-X       
+    51          fBodyAccJerk-std()-Y        
+    52          fBodyAccJerk-std()-Z        
+    53          fBodyGyro-mean()-X          
+    54          fBodyGyro-mean()-Y         
+    55          fBodyGyro-mean()-Z         
+    56          fBodyGyro-std()-X           
+    57          fBodyGyro-std()-Y           
+    58          fBodyGyro-std()-Z           
+    59          fBodyAccMag-mean()          
+    60          fBodyAccMag-std()          
+    61          fBodyBodyAccJerkMag-mean()
+    62          fBodyBodyAccJerkMag-std()  
+    63          fBodyBodyGyroMag-mean()     
+    64          fBodyBodyGyroMag-std()      
+    65          fBodyBodyGyroJerkMag-mean()
+    66          fBodyBodyGyroJerkMag-std() 
 
 Each of the feature is measured along three (X,Y,Z) axis and also has mean and 
 standard deviation value. 
 
 Along with feature we have y(Activity_Name).
-        Numerical value     Activity Name
-        1                   WALKING
-        2                   WALKING_UPSTAIRS
-        3                   WALKING_DOWNSTAIRS
-        4                   SITTING
-        5                   STANDING
-        6                   LAYING
+    67          Activity_Name:
+            Possible value and numerical index of Activity_Name
+            Numerical value     Activity Name
+            1                   WALKING
+            2                   WALKING_UPSTAIRS
+            3                   WALKING_DOWNSTAIRS
+            4                   SITTING
+            5                   STANDING
+            6                   LAYING
               
 
 There are total 30 subjects so subject id starts from 1 and ends at 30.
+    68          Subjects
 
 
 The task we want to achieve is combine features, label and subject ids for each
@@ -180,13 +186,49 @@ subject id.
 
 7 - Names the columns of the dataframe using the header. 
 
-8 - Export the dataframe to a file "tidydataset1.csv".    
+8 - Export the dataframe to a file "tidydataset1.txt".    
 
 9 - For step 5 of the assignment we extract the column corresponding to mean 
-value of observables, activity name and subject ids. This is already done in step 1.
+value of observables, activity name and subject ids. Following are the column
+name and the column name
+    column id       column name
+    1               tBodyAcc-mean()-X           
+    2               tBodyAcc-mean()-Y           
+    3               tBodyAcc-mean()-Z           
+    4               tGravityAcc-mean()-X        
+    5               tGravityAcc-mean()-Y        
+    6               tGravityAcc-mean()-Z        
+    7               tBodyAccJerk-mean()-X       
+    8               tBodyAccJerk-mean()-Y       
+    9               tBodyAccJerk-mean()-Z       
+    10              tBodyGyro-mean()-X         
+    11              tBodyGyro-mean()-Y          
+    12              tBodyGyro-mean()-Z          
+    13              tBodyGyroJerk-mean()-X
+    14              tBodyGyroJerk-mean()-Y      
+    15              tBodyGyroJerk-mean()-Z      
+    16              tBodyAccMag-mean()       
+    17              tGravityAccMag-mean()          
+    18              tBodyAccJerkMag-mean()      
+    19              tBodyGyroMag-mean()        
+    20              tBodyGyroJerkMag-mean()     
+    21              fBodyAcc-mean()-X           
+    22              fBodyAcc-mean()-Y          
+    23              fBodyAcc-mean()-Z           
+    24              fBodyAccJerk-mean()-X       
+    25              fBodyAccJerk-mean()-Y      
+    26              fBodyAccJerk-mean()-Z      
+    27              fBodyGyro-mean()-X          
+    28              fBodyGyro-mean()-Y         
+    29              fBodyGyro-mean()-Z         
+    30              fBodyAccMag-mean()          
+    31              fBodyBodyAccJerkMag-mean()
+    32              fBodyBodyGyroMag-mean()     
+    33              fBodyBodyGyroJerkMag-mean()
+    34              Activity_name
+    35              Subjects
 
-10 - Export this dataframe into another file tidydataset2.csv
-
-
+    
+10 - Export this dataframe into another file tidydataset2.txt.
 
 

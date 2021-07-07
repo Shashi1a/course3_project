@@ -90,7 +90,7 @@ combineData<-function()
         colnames(dataset1)<-cname
     
         # saving data in a csv file
-        write.csv(dataset1,"./tidydataset1.csv",row.names = F)        
+        write.table(dataset1,"./tidydataset1.txt",row.names = F)        
        
         # array containing names of averaged measurement
         cname2<-array(dim=length(mean_col)+2)
@@ -101,10 +101,12 @@ combineData<-function()
             j<-j+1}
         cname2[length(mean_col)+1]="Activity_Name"
         cname2[length(mean_col)+2]="Subject"
+        print(cname2)
         
         # subseting only values of averaged observables and activity name from the entire dataset
         dataset2<-dataset1[,cname2]
         
         # saving the dataset in a csv file
-        write.csv(dataset2,"./tidydataset2.csv",row.names = F)
+        #write.csv(dataset2,"./tidydataset2.csv",row.names = F)
+        write.table(dataset2,"./tidydataset2.txt",row.names = FALSE)
     }
