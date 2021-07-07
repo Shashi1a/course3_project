@@ -3,11 +3,11 @@ The Data -
 The data is also known as Human activity recognition using smartphones dataset.
 The data was obtained by experiment on volunteer who wore a smartphone on their
 waist and carried out various activities. The accelerometer and gyroscope 
-sensor on the smartphone  captured measurements of linear acceleration in three 
+sensor on the smartphone captured measurements of linear acceleration in three 
 different axis(x,y,z),  angular velocity in three different axis(x,y,z).
 The activities were observed  visually whilst the smart phone was measuring the 
 observables. Other observables were also calculated using these primary 
-measurements. Data was also measured in  frequency domain and result for frequency 
+measurements. Data was also tranformed in  frequency domain and result for frequency 
 domain are also presented.
 
 The data required to prepare the tidy data set is in two different folders train 
@@ -65,7 +65,7 @@ each subject.
 
 12. test/Inertial Signals: Folder with individual observation for each subject.
 
-We are interested in the following features out of all 561:
+We are interested in the following features out of all 561 and there value lies in the range[-1:1].
     tBodyAcc-mean()-X           
     tBodyAcc-mean()-Y           
     tBodyAcc-mean()-Z           
@@ -136,11 +136,17 @@ We are interested in the following features out of all 561:
 Each of the feature is measured along three (X,Y,Z) axis and also has mean and 
 standard deviation value. 
 
-Along with feature we have label(Activity_Name) and subject id.
-    Activity_Name               
-    Subject          
+Along with feature we have y(Activity_Name).
+        Numerical value     Activity Name
+        1                   WALKING
+        2                   WALKING_UPSTAIRS
+        3                   WALKING_DOWNSTAIRS
+        4                   SITTING
+        5                   STANDING
+        6                   LAYING
+              
 
-
+There are total 30 subjects so subject id starts from 1 and ends at 30.
 
 
 The task we want to achieve is combine features, label and subject ids for each
@@ -176,8 +182,8 @@ subject id.
 
 8 - Export the dataframe to a file "tidydataset1.csv".    
 
-9 - For step 5 of the assignment we extract the column corresponding to average 
-value of observables, activity name and subject ids.
+9 - For step 5 of the assignment we extract the column corresponding to mean 
+value of observables, activity name and subject ids. This is already done in step 1.
 
 10 - Export this dataframe into another file tidydataset2.csv
 
