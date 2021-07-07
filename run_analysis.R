@@ -85,29 +85,12 @@ combineData<-function()
         # combining features of mean and standard deviation of observable and label 
         dataset1<-cbind(datacomplete[,sorted_list],labelcomplete,dsubject)
 
-        print(cname)
         # setting column names of the dataframe
         colnames(dataset1)<-cname
-    
-        # saving data in a csv file
-        write.table(dataset1,"./tidydataset1.txt",row.names = F)        
-       
-        
+  
         # array containing names of averaged measurement
-        cname2<-array(dim=length(mean_col)+2)
-        
-        j=1
-        for(i in mean_col){
-            cname2[j]=features[i,2]
-            j<-j+1}
-        cname2[length(mean_col)+1]="Activity_Name"
-        cname2[length(mean_col)+2]="Subject"
-        print(cname2)
-        
-        # subseting only values of averaged observables and activity name from the entire dataset
-        dataset2<-dataset1[,cname2]
-        
-        # saving the dataset in a csv file
-        #write.csv(dataset2,"./tidydataset2.csv",row.names = F)
-        write.table(dataset2,"./tidydataset2.txt",row.names = FALSE)
+        datafinal<-aggregate(data1[,-c(67,68)],by=list(data1$Activity_Name,data1$Subject),mean)
+    
+        # saving the dataset in a txt file
+        write.table(datafinal,"./tidydataset2.txt",row.names = FALSE)
     }

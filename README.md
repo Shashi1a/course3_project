@@ -6,15 +6,11 @@ Following files/folders are present in the directory:
 
     - README.md: Read me file
     - UCI HAR Dataset: Folder with all the data
-    - codeBook.md : Explains all the steps taken to prepare two new tidy datasets 
-        tidydataset1.txt and tidydataset2.txt
-    - tidydataset1.txt: The data set that has mean and standard deviation of all the 
-        subjects as well as the labelled activities. 
-    - tidydataset2.txt: The dataset that has only mean value of all the observables and 
-        activity  for all the subjects.
+    - codeBook.md : Explains all the steps taken to prepare tidydataset2.txt
+    - tidydataset2.txt: The dataset that has only averaged value of all the observables 
+        for each activity  for each subjects.
     - run_analysis.R: The r script that does all the preprocessing required to 
         prepare two tidy datasets from the raw data stored in train and test folder. 
-
 
 Script run_analysis.R performs the task of cleaning the data.
 
@@ -25,3 +21,7 @@ To compile the script:
 
 1- first source it into the console using source("run_analysis.R").
 2- call the function datacollect() (without any argument).
+
+
+
+

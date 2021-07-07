@@ -185,50 +185,11 @@ to the values they contain.
 subject id.
 
 7 - Names the columns of the dataframe using the header. 
-
-8 - Export the dataframe to a file "tidydataset1.txt".    
-
-9 - For step 5 of the assignment we extract the column corresponding to mean 
-value of observables, activity name and subject ids. Following are the column
-name and the column names.
-    column id       column name
-    1               tBodyAcc-mean()-X           
-    2               tBodyAcc-mean()-Y           
-    3               tBodyAcc-mean()-Z           
-    4               tGravityAcc-mean()-X        
-    5               tGravityAcc-mean()-Y        
-    6               tGravityAcc-mean()-Z        
-    7               tBodyAccJerk-mean()-X       
-    8               tBodyAccJerk-mean()-Y       
-    9               tBodyAccJerk-mean()-Z       
-    10              tBodyGyro-mean()-X         
-    11              tBodyGyro-mean()-Y          
-    12              tBodyGyro-mean()-Z          
-    13              tBodyGyroJerk-mean()-X
-    14              tBodyGyroJerk-mean()-Y      
-    15              tBodyGyroJerk-mean()-Z      
-    16              tBodyAccMag-mean()       
-    17              tGravityAccMag-mean()          
-    18              tBodyAccJerkMag-mean()      
-    19              tBodyGyroMag-mean()        
-    20              tBodyGyroJerkMag-mean()     
-    21              fBodyAcc-mean()-X           
-    22              fBodyAcc-mean()-Y          
-    23              fBodyAcc-mean()-Z           
-    24              fBodyAccJerk-mean()-X       
-    25              fBodyAccJerk-mean()-Y      
-    26              fBodyAccJerk-mean()-Z      
-    27              fBodyGyro-mean()-X          
-    28              fBodyGyro-mean()-Y         
-    29              fBodyGyro-mean()-Z         
-    30              fBodyAccMag-mean()          
-    31              fBodyBodyAccJerkMag-mean()
-    32              fBodyBodyGyroMag-mean()     
-    33              fBodyBodyGyroJerkMag-mean()
-    34              Activity_name
-    35              Subjects
-
     
-10 - Export this dataframe into another file tidydataset2.txt.
+8 - For step 5 of the assignment we perform an aggregation  over all the observables
+from pervious step for each activity and each subject. Performed using aggregation function
+    excluding column for Activity name and Subject.
+    datafinal<-aggregate(data[,-c(67,68)],by=list(data1$Activity_Name,data1$Subject),mean)
 
-
+        
+9 - Export this dataframe into another file tidydataset2.txt.
