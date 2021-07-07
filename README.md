@@ -7,10 +7,10 @@ Following files/folders are present in the directory:
     - README.md: Read me file
     - UCI HAR Dataset: Folder with all the data
     - codeBook.md : Explains all the steps taken to prepare two new tidy datasets 
-        tidydataset1.csv and tidydataset2.csv
-    - dataset1.csv: The data set that has mean and standard deviation of all the 
+        tidydataset1.txt and tidydataset2.txt
+    - tidydataset1.txt: The data set that has mean and standard deviation of all the 
         subjects as well as the labelled activities. 
-    - dataset2.csv: The dataset that has only mean value of all the observables and 
+    - tidydataset2.txt: The dataset that has only mean value of all the observables and 
         activity  for all the subjects.
     - run_analysis.R: The r script that does all the preprocessing required to 
         prepare two tidy datasets from the raw data stored in train and test folder. 
